@@ -1,0 +1,19 @@
+version: '3.3'
+
+services:
+  db:
+    image: postgres:13
+    ports:
+      - 5432:5432
+    volumes:
+      - ~/apps/postgres:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=S3cret
+      - POSTGRES_USER=assignment_user
+      - POSTGRES_DB=assignment_db
+    networks:
+      - assignment
+
+networks:
+  assignment:
+    driver: bridge
