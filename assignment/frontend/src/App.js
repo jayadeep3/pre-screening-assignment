@@ -7,7 +7,7 @@ function App() {
 
   const handleSubmit = async (action) => {
     try {
-      const response = await fetch(`http://13.201.35.173:8000/${action}`, {
+      const response = await fetch(`http://13.127.55.21:8000/${action}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
